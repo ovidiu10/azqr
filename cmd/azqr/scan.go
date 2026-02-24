@@ -25,6 +25,7 @@ import (
 	"github.com/cmendible/azqr/internal/scanners/evh"
 	"github.com/cmendible/azqr/internal/scanners/kv"
 	"github.com/cmendible/azqr/internal/scanners/mysql"
+	"github.com/cmendible/azqr/internal/scanners/oai"
 	"github.com/cmendible/azqr/internal/scanners/plan"
 	"github.com/cmendible/azqr/internal/scanners/psql"
 	"github.com/cmendible/azqr/internal/scanners/redis"
@@ -88,6 +89,7 @@ var scanCmd = &cobra.Command{
 			&afw.FirewallScanner{},
 			&mysql.MySQLScanner{},
 			&mysql.MySQLFlexibleScanner{},
+			&oai.OpenAIScanner{},
 		}
 
 		scan(cmd, serviceScanners)

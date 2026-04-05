@@ -2592,6 +2592,14 @@
 		"resourceType": "Microsoft.Cache/Redis"
 	},
 	{
+		"category": "HighAvailability",
+		"impact": "High",
+		"learnMoreUrl": "https://learn.microsoft.com/en-us/azure/redis/migrate/migrate-redis-enterprise-understand",
+		"recommendation": "Redis Enterprise SKU is deprecated and should be migrated to Azure Managed Redis",
+		"recommendationId": "redis-010",
+		"resourceType": "Microsoft.Cache/redisEnterprise"
+	},
+	{
 		"category": "Governance",
 		"impact": "Low",
 		"learnMoreUrl": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json",

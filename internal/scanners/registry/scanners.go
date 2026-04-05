@@ -397,6 +397,7 @@ func init() {
 func init() {
 	models.ScannerList["redis"] = []models.IAzureScanner{
 		models.NewBaseScanner("Redis Cache", "Microsoft.Cache/Redis"),
+		models.NewBaseScanner("Redis Enterprise", "Microsoft.Cache/redisEnterprise"),
 	}
 }
 

@@ -12,6 +12,7 @@ resources
     type =~ 'Microsoft.AVS/privateClouds', 'avs',
     type =~ 'Microsoft.AzureArcData/sqlServerInstances', 'arc',
     type =~ 'Microsoft.Cache/Redis', 'redis',
+    type =~ 'Microsoft.Cache/redisEnterprise', 'redis|amr',
     type =~ 'Microsoft.Cdn/profiles', 'afd',
     type =~ 'Microsoft.CognitiveServices/accounts', 'aif|oai|cog',
     type =~ 'Microsoft.Compute/availabilitySets', 'avail',
@@ -114,6 +115,9 @@ resources
 )
 | where expectedPrefix != ''
 | extend compliant = case(
+    // Redis Enterprise - legacy prefix 'redis' or Azure Managed Redis prefix 'amr'
+    type =~ 'Microsoft.Cache/redisEnterprise' and name startswith 'redis', true,
+    type =~ 'Microsoft.Cache/redisEnterprise' and name startswith 'amr', true,
     // Handle resources with multiple valid prefixes - CognitiveServices
     type =~ 'Microsoft.CognitiveServices/accounts' and name startswith 'aif', true,
     type =~ 'Microsoft.CognitiveServices/accounts' and name startswith 'oai', true,

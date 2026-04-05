@@ -1,0 +1,20 @@
+- description: Redis Enterprise SKU is deprecated and should be migrated to Azure Managed Redis
+  aprlGuid: redis-010
+  recommendationTypeId: null
+  recommendationControl: HighAvailability
+  recommendationImpact: High
+  recommendationResourceType: Microsoft.Cache/redisEnterprise
+  recommendationMetadataState: Active
+  longDescription: |
+    The Redis Enterprise SKUs (Enterprise_E5, Enterprise_E10, Enterprise_E20, Enterprise_E50,
+    Enterprise_E100, Enterprise_E200, Enterprise_E400, EnterpriseFlash_F300, EnterpriseFlash_F700,
+    EnterpriseFlash_F1500) are being retired. New instances cannot be created after April 2026 and
+    all existing instances will be migrated by March 2027. Migrate to Azure Managed Redis using the
+    new SKUs: Balanced_B*, MemoryOptimized_M*, ComputeOptimized_X*, or Flash_F*.
+  potentialBenefits: Avoid service disruption and benefit from improved performance and cost efficiency
+  pgVerified: false
+  automationAvailable: true
+  tags: []
+  learnMoreLink:
+  - name: Migrate from Redis Enterprise to Azure Managed Redis
+    url: https://learn.microsoft.com/en-us/azure/redis/migrate/migrate-redis-enterprise-understand

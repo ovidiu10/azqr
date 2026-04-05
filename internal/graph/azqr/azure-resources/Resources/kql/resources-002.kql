@@ -159,4 +159,4 @@ resources
 | where compliant == false
 | extend recommendationId = 'resources-002'
 | extend param1 = strcat('Expected prefix: ', expectedPrefix, ', Actual: ', name)
-| project recommendationId, name, id, tags, param1, type
+| project recommendationId, name, id, tags, param1

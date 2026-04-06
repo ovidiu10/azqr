@@ -30,6 +30,25 @@
   - name: Learn more
     url: 'https://learn.microsoft.com/azure/azure-cache-for-redis/cache-network-isolation'
 
+- description: Azure Cache for Redis SKU is deprecated and should be migrated to Azure Managed Redis
+  aprlGuid: redis-011
+  recommendationTypeId: null
+  recommendationControl: HighAvailability
+  recommendationImpact: High
+  recommendationResourceType: Microsoft.Cache/Redis
+  recommendationMetadataState: Active
+  longDescription: |
+    All Azure Cache for Redis SKUs (Basic, Standard, Premium) are being retired on September 30, 2028.
+    Migrate your existing instances to Azure Managed Redis using the new SKUs:
+    Balanced_B*, MemoryOptimized_M*, ComputeOptimized_X*, or Flash_F*.
+  potentialBenefits: Avoid service disruption and benefit from improved performance and cost efficiency
+  pgVerified: false
+  automationAvailable: true
+  tags: []
+  learnMoreLink:
+  - name: Migrate Basic, Standard, and Premium tiers to Azure Managed Redis
+    url: https://learn.microsoft.com/en-us/azure/redis/migrate/migrate-basic-standard-premium-overview
+
 - description: Redis should enforce TLS >= 1.2
   aprlGuid: redis-009
   recommendationTypeId: null
